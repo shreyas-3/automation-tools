@@ -20,6 +20,7 @@ output.yml — output file generated with vaulted string variables.
 Sample input file :
 
 [smhatre@at ~]$ cat test.yml
+
 test: “bdasbdk$asd kjasdkjasd”
 
 test_key: |
@@ -30,6 +31,7 @@ Sample output file :
 this is how sample output file get created by script
 
 [smhatre@at ~]$ cat output.yml (trimmed output)
+
 test: !vault |
 $ANSIBLE_VAULT;1.1;AES256
 37396666346165323136316133616337626434643733393065646366363134376635666432633838
