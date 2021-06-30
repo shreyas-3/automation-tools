@@ -4,6 +4,10 @@
 
 Encrypting multiple ansible variables using automation in one go. 
 
+Problem : It is tedious job to encrypt each ansible variable one by one manually
+
+Solution : Automation tool to create vaulted string ansible variable. Just pass variable yaml file having list of variables in plain text format and convert that to file having vaulted string variable. 
+
 -- This also help if you are using Ansible Tower as variable need to be vault string encrypted instead of encrypting complete vault file to avoid dynamic inventory loading issue with ansible tower. 
 
 -- with complete encrypted vault file content you always have to decrypt the vaulted file to see which variables are there. So it is better to encrypt each variable as vaulted string variable as those will be easy to search and helps in debug
