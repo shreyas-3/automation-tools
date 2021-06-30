@@ -3,7 +3,9 @@
 **encrypt_var_string.py**
 
 Encrypting multiple ansible variables using automation in one go. 
+
 -- This also help if you are using Ansible Tower as variable need to be vault string encrypted instead of encrypting complete vault file to avoid dynamic inventory loading issue with ansible tower. 
+
 -- with complete encrypted vault file content you always have to decrypt the vaulted file to see which variables are there. So it is better to encrypt each variable as vaulted string variable as those will be easy to search and helps in debug
 
 How to use :
