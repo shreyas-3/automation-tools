@@ -46,3 +46,4 @@ you can always ensure/verify correct vault value by using below ansible command.
 
 ansible localhost -m ansible.builtin.debug -a var=”test” -e “@output.yml” — ask-vault-pass
 this will print variable value.
+
