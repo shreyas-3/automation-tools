@@ -16,13 +16,16 @@ test.yml — input file having list of variables to encrypt
 output.yml — output file generated with vaulted string variables.
 
 Sample input file :
+
 [smhatre@at ~]$ cat test.yml
 test: “bdasbdk$asd kjasdkjasd”
 test_key: |
 MIIEogIBAAKCAQEAoanA/Ohcw5HiEN2Mmzs/RBImxgiW6J7dBVp+76673McaUj8R
 
 Sample output file :
+
 this is how sample output file get created by script
+
 [smhatre@at ~]$ cat output.yml (trimmed output)
 test: !vault |
 $ANSIBLE_VAULT;1.1;AES256
@@ -34,6 +37,8 @@ $ANSIBLE_VAULT;1.1;AES256
 3562386137343731663339373933353534643330356133390a333366356537636466633537656135
 
 Tips:
+
 you can always ensure/verify correct vault value by using below ansible command.
+
 ansible localhost -m ansible.builtin.debug -a var=”test” -e “@output.yml” — ask-vault-pass
 this will print variable value.
