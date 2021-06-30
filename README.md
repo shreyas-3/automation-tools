@@ -4,9 +4,9 @@
 
 Encrypting multiple ansible variables using automation in one go. 
 
-Problem : It is tedious job to encrypt each ansible variable one by one manually
+**Problem** : It is tedious job to encrypt each ansible variable one by one manually
 
-Solution : Automation tool to create vaulted string ansible variable. Just pass variable yaml file having list of variables in plain text format and convert that to file having vaulted string variable. 
+**Solution** : Automation tool to create vaulted string ansible variable. Just pass variable yaml file having list of variables in plain text format and convert that to file having vaulted string variable. 
 
 -- This also help if you are using Ansible Tower as variable need to be vault string encrypted instead of encrypting complete vault file to avoid dynamic inventory loading issue with ansible tower. 
 
@@ -17,7 +17,9 @@ How to use :
 export ANSIBLE_VAULT_PASSWORD_FILE=/home/sm/v.txt
 v.txt — plain text file containing vault password
 2) run script
-python encrypt_var_string.py test.yml > output.yml
+
+**python encrypt_var_string.py test.yml > output.yml**
+
 test.yml — input file having list of variables to encrypt
 output.yml — output file generated with vaulted string variables.
 
